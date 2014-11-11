@@ -2,7 +2,7 @@
    Module/Video responsive
    ======================= */
 
-.video {
+/* .video {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
@@ -16,4 +16,24 @@
         width: 100%;
         height: 100%;
     }
+} */
+
+.feature {
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.feature img {
+    display: inline-block;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+
+    .feature { display: none; }
+    
 }

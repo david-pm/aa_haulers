@@ -1,12 +1,5 @@
-@import "objects/btn";
-
-.post-title {
-  color: #333;
-  font-size: 2em;
-  font-weight: normal;
-}
-
-.post-copy {
-	font: 12px Helvetica, sans-serif;
-	color: #343434;
-}
+@import "objects/arrow";
+@import "objects/exit";
+@import "objects/details";
+@import "objects/video";
+@import "objects/loading";

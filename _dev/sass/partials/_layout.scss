@@ -1,5 +1,3 @@
-
-.post {
-	margin: 2em auto;
-	max-width: 600px;
-}
+@import "layout/og-grid";
+@import "layout/viewer";
+@import "layout/prod-grid";
