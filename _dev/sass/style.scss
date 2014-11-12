@@ -16,27 +16,3 @@
 
 //////////////////////////////
 // One Offs
-header {
-	text-align: center;
-	h1, h2 {
-		letter-spacing: -1px;
-	}
-	.AA-logo {
-		font-size: 5rem;
-		color: $red;
-		margin: 0;
-		&::after {
-			content:" \00a9";
-			font-size: 1rem;
-			font-weight: 300;
-			vertical-align: text-top;
-		}
-	}
-
-}
-.prod-grid-heading {
-	text-align: center;
-	h2 {
-		font-size: 2rem;
-	}
-}
