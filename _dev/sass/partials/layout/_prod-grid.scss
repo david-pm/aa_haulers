@@ -1,5 +1,19 @@
 // _prod-grid.scss
 
 ul.og-grid.prod-grid { // THIS IS TEMP FOR STYLING PURPOSES ONLY
-	margin: 45rem 0 0;
+	margin: 2rem 0 0;
+	background: #f9f9f9;
+	li {
+		display: inline-block;
+		margin: 10px 5px 0 5px;
+		vertical-align: top;
+		height: 480px;
+	}
+	li > a,
+	li > a img {
+		border: none;
+		outline: none;
+		display: block;
+		position: relative;
+	}
 }
