@@ -352,9 +352,9 @@ var Grid = (function() {
             this.$href = $( '<a href="#">Visit website</a>' );
             this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
             this.$loading = $( '<div class="loading"></div>' );
-            this.$fullimage = $( '<div class="feature"></div>' ).append( this.$loading );
+            this.$featureBox = $( '<div class="feature"></div>' ).append( this.$loading );
             this.$closePreview = $( '<span class="exit"></span>' );
-            this.$previewInner = $( '<div class="viewer-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+            this.$previewInner = $( '<div class="viewer-inner"></div>' ).append( this.$closePreview, this.$featureBox, this.$details );
             this.$previewEl = $( '<div class="viewer"></div>' ).append( this.$previewInner );
             // append preview element to the item
             this.$item.append( this.getEl() );
@@ -364,6 +364,7 @@ var Grid = (function() {
             }
         },
         
+
 		update : function( $item ) {
 
 			if( $item ) {
@@ -405,15 +406,15 @@ var Grid = (function() {
 
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-			if( self.$fullimage.is( ':visible' ) ) {
+			if( self.$featureBox.is( ':visible' ) ) {
 				this.$loading.show();
 				$( '<img/>' ).load( function() {
 					var $img = $( this );
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						self.$loading.hide();
-						self.$fullimage.find( 'img' ).remove();
+						self.$featureBox.find( 'img' ).remove();
 						self.$largeImg = $img.fadeIn( 350 );
-						self.$fullimage.append( self.$largeImg );
+						self.$featureBox.append( self.$largeImg );
 					}
 				} ).attr( 'src', eldata.largesrc );	
 			}
