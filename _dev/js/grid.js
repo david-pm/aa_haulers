@@ -403,7 +403,6 @@ var Grid = (function() {
 				self.$largeImg.remove();
 			}
 
-
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
 			if( self.$featureBox.is( ':visible' ) ) {
