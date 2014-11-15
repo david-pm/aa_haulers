@@ -47,7 +47,7 @@ $special = $event.special.debouncedresize = {
 // needed because .load() doesn't work on cached images
 
 // callback function gets image collection as argument
-//  this is the container
+// this is the container
 
 // original: MIT license. Paul Irish. 2010.
 // contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
@@ -161,6 +161,7 @@ $.fn.imagesLoaded = function( callback ) {
 	return deferred ? deferred.promise( $this ) : $this;
 };
 
+// Custom Grid js
 var Grid = (function() {
 
 		// list of items
@@ -200,13 +201,13 @@ var Grid = (function() {
 		
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
-
+		
 		// preload all images
 		$grid.imagesLoaded( function() {
 
 			// save item´s size and offset
 			saveItemInfo( true );
-			// get window´s size
+			// get window´s size - winsize.width, winsize.height
 			getWinSize();
 			// initialize some events
 			initEvents();
@@ -215,11 +216,12 @@ var Grid = (function() {
 
 	}
 
-	// add more items to the grid.
-	// the new items need to appended to the grid.
-	// after that call Grid.addItems(theItems);
+	/*! 
+	 *  add more items to the grid.
+	 * the new items need to be appended to the grid.
+	 * after that call Grid.addItems(theItems);
+	 *
 	function addItems( $newitems ) {
-
 		$items = $items.add( $newitems );
 
 		$newitems.each( function() {
@@ -233,6 +235,8 @@ var Grid = (function() {
 		initItemsEvents( $newitems );
 
 	}
+	*
+	*/
 
 	// saves the item´s offset top and height (if saveheight is true)
 	function saveItemInfo( saveheight ) {
@@ -271,15 +275,16 @@ var Grid = (function() {
 	}
 
 	function initItemsEvents( $items ) {
-		$items.on( 'click', 'span.exit', function() {
+		$items.on( 'click', 'span.exit', function(e) {
 			hidePreview();
-			return false;
+			e.preventDefault();
+
 		} ).children( 'a' ).on( 'click', function(e) {
 
 			var $item = $( this ).parent();
 			// check if item already opened
 			current === $item.index() ? hidePreview() : showPreview( $item );
-			return false;
+			e.preventDefault();
 
 		} );
 	}
@@ -290,7 +295,7 @@ var Grid = (function() {
 
 	function showPreview( $item ) {
 
-		var preview = $.data( this, 'preview' ),
+		var preview = $.data( this, 'preview' ),		
 			// item´s offset top
 			position = $item.data( 'offsetTop' );
 
@@ -396,6 +401,7 @@ var Grid = (function() {
 			if( typeof self.$largeImg != 'undefined' ) {
 				self.$largeImg.remove();
 			}
+
 
 			// preload large image and add it to the preview
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
@@ -509,8 +515,8 @@ var Grid = (function() {
 	}
 
 	return { 
-		init : init,
-		addItems : addItems
+		init : init/*,
+		addItems : addItems*/
 	};
 
 })();
