@@ -347,12 +347,13 @@ var Grid = (function() {
 	Preview.prototype = { 
 		create : function() {
 			// create Preview structure:
+			this.$iframeWrapper = $('<iframe src="" frameborder="0" allowfullscreen></iframe>');
             this.$title = $( '<h3></h3>' );
             this.$description = $( '<p></p>' );
             this.$href = $( '<a href="#">Visit website</a>' );
             this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
             this.$loading = $( '<div class="loading"></div>' );
-            this.$featureBox = $( '<div class="feature"></div>' ).append( this.$loading );
+            this.$featureBox = $( '<div class="feature"></div>' ).append( this.$iframeWrapper, this.$loading );
             this.$closePreview = $( '<span class="exit"></span>' );
             this.$previewInner = $( '<div class="viewer-inner"></div>' ).append( this.$closePreview, this.$featureBox, this.$details );
             this.$previewEl = $( '<div class="viewer"></div>' ).append( this.$previewInner );
@@ -389,12 +390,21 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
+					description : $itemEl.data( 'description' ),
+					video: $itemEl.data('video')
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
+
+			// VIDEO
+			// !!!!!
+			if (eldata.video) {
+                this.$iframeWrapper.attr('src', (eldata.video ? eldata.video : '')).css('display', 'block');
+            } else {
+                this.$iframeWrapper.css('display', 'none');
+            }
 
 			var self = this;
 			
@@ -416,7 +426,12 @@ var Grid = (function() {
 						self.$featureBox.append( self.$largeImg );
 					}
 				} ).attr( 'src', eldata.largesrc );	
-			}
+
+			// remove loading icon on video load
+				$( 'iframe').load( function() {
+					self.$loading.hide();
+				} );
+			} // if
 
 		},
 		open : function() {
@@ -511,7 +526,16 @@ var Grid = (function() {
 		},
 		getEl : function() {
 			return this.$previewEl;
-		}
+		},
+		PreviewGallery: function() {
+            $(".SmallImage").click(function() {
+                var image = $(this).attr("rel");
+                $('.og-fullimg').hide();
+                $('.og-fullimg').html('<img src="' + image + '"/>');
+                $('.og-fullimg').fadeIn('slow');
+                return false;
+            });
+        }
 	}
 
 	return { 
