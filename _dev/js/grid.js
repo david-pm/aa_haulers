@@ -350,9 +350,19 @@ var Grid = (function() {
 			this.$iframeWrapper = $('<iframe src="" frameborder="0" allowfullscreen></iframe>');
             this.$title = $( '<h3></h3>' );
             this.$description = $( '<p></p>' );
-            this.$href = $( '<a href="#">Visit website</a>' );
-            this.$products = $( '<div class="products"></div>');
-            this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+
+            this.$imgOne = $( '<img src="../img/fash1.jpg" alt="" title="" />');
+            this.$linkOne = $( '<a href="#"></a>' ).append( this.$imgOne );
+            this.$imgTwo = $( '<img src="../img/fash2.jpg" alt="" title="" />');
+            this.$linkTwo = $( '<a href="#"></a>' ).append( this.$imgTwo );
+			this.$imgThree = $( '<img src="../img/fash3.jpg" alt="" title="" />');
+            this.$linkThree = $( '<a href="#"></a>' ).append( this.$imgThree );
+            this.$imgFour = $( '<img src="../img/fash4.jpg" alt="" title="" />');
+            this.$linkFour = $( '<a href="#"></a>' ).append( this.$imgFour );
+            
+            this.$products = $( '<div class="products"></div>').append( this.$linkOne, this.$linkTwo, this.$linkThree, this.$linkFour );
+            
+            this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description );
             this.$loading = $( '<div class="loading"></div>' );
             this.$featureBox = $( '<div class="feature"></div>' ).append( this.$iframeWrapper, this.$loading );
             this.$closePreview = $( '<span class="exit"></span>' );
@@ -385,10 +395,12 @@ var Grid = (function() {
 			// update current value
 			current = this.$item.index();
 
+
+
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
-					href : $itemEl.attr( 'href' ),
+					//href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
@@ -397,7 +409,7 @@ var Grid = (function() {
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-			this.$href.attr( 'href', eldata.href );
+			//this.$href.attr( 'href', eldata.href );
 
 			// VIDEO
 			// !!!!!
