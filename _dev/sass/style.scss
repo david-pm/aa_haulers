@@ -16,9 +16,19 @@
 
 //////////////////////////////
 // One Offs
+
+// video
 .feature iframe {
 	margin: auto;
 	width: 500px;
 	min-height: 315px;
 	display: none;
+}
+
+// products in feature video
+.products {
+	height: auto;
+	width: 100%;
+	background: #ffc;
+	clear: left;
 }

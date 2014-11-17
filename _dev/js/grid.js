@@ -351,11 +351,12 @@ var Grid = (function() {
             this.$title = $( '<h3></h3>' );
             this.$description = $( '<p></p>' );
             this.$href = $( '<a href="#">Visit website</a>' );
+            this.$products = $( '<div class="products"></div>');
             this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
             this.$loading = $( '<div class="loading"></div>' );
             this.$featureBox = $( '<div class="feature"></div>' ).append( this.$iframeWrapper, this.$loading );
             this.$closePreview = $( '<span class="exit"></span>' );
-            this.$previewInner = $( '<div class="viewer-inner"></div>' ).append( this.$closePreview, this.$featureBox, this.$details );
+            this.$previewInner = $( '<div class="viewer-inner"></div>' ).append( this.$closePreview, this.$featureBox, this.$details, this.$products );
             this.$previewEl = $( '<div class="viewer"></div>' ).append( this.$previewInner );
             // append preview element to the item
             this.$item.append( this.getEl() );
