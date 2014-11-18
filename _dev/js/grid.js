@@ -359,8 +359,12 @@ var Grid = (function() {
             this.$linkThree = $( '<a href="#"></a>' ).append( this.$imgThree );
             this.$imgFour = $( '<img class="prods" />');
             this.$linkFour = $( '<a href="#"></a>' ).append( this.$imgFour );
+            this.$imgFive = $( '<img class="prods" />');
+            this.$linkFive = $( '<a href="#"></a>' ).append( this.$imgFive );
+            this.$imgSix = $( '<img class="prods" />');
+            this.$linkSix = $( '<a href="#"></a>' ).append( this.$imgSix );
             
-            this.$products = $( '<div class="products"></div>').append( this.$linkOne, this.$linkTwo, this.$linkThree, this.$linkFour );
+            this.$products = $( '<div class="products"></div>').append( this.$linkOne, this.$linkTwo, this.$linkThree, this.$linkFour, this.$linkFive, this.$linkSix );
             
             this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description );
             this.$loading = $( '<div class="loading"></div>' );
@@ -402,6 +406,8 @@ var Grid = (function() {
 					prod2 : $itemEl.data( 'prod2' ),
 					prod3 : $itemEl.data( 'prod3' ),
 					prod4 : $itemEl.data( 'prod4' ),
+					prod5 : $itemEl.data( 'prod5' ),
+					prod6 : $itemEl.data( 'prod6' ), 
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
@@ -414,6 +420,8 @@ var Grid = (function() {
 			this.$imgTwo.attr('src', ( eldata.prod2 ? eldata.prod2 : '' ));
 			this.$imgThree.attr('src', ( eldata.prod3 ? eldata.prod3 : '' ));
 			this.$imgFour.attr('src', ( eldata.prod4 ? eldata.prod4 : '' ));
+			this.$imgFive.attr('src', ( eldata.prod5 ? eldata.prod5 : '' ));
+			this.$imgSix.attr('src', ( eldata.prod6 ? eldata.prod6 : '' ));
 			
 			var self = this;
 			

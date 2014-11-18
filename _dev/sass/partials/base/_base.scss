@@ -24,12 +24,12 @@ a {
 }
 
 ::-moz-selection {
-    background: $red;
+    background: $color-selection;
     color: #fff;
     text-shadow: none;
 }
 ::selection {
-    background: $red;
+    background: $color-selection;
     color: #fff;
     text-shadow: none;
 }

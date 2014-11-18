@@ -1,7 +1,17 @@
 // _h-container.scss
 
+/* add this class to a wrapper to see prod site constraints
+.aaWrapper { // this is for dev only. **delete for prod.**
+width: 935px;
+margin: auto;
+min-height: 100%;
+background: #FFFFFF;
+position: relative;
+padding: 0 10px;} */
+
 .h-container {
 	border-top: 3px solid #ddd;
-	max-width: 1275px;
+	max-width: 1240px;
 	margin: auto;
 }
+

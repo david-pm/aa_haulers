@@ -26,6 +26,7 @@ $grey: #555;
 $litegrey: #212121;
 $red: #df2e30;
 $blue: #1894c4;
+$lite-blu: rgba(100,167,255,.9);
 // Text
 $color-text-base: #212121;
 
@@ -37,7 +38,7 @@ $color-link-hover: darken($grey, 10%);
 $color-mixin-placeholder: #cdcdcd;
 
 // Selection
-$color-selection: $red;
+$color-selection: $lite-blu;
 
 // Btn
 $bg-btn: $grey;
