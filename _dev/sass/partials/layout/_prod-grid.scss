@@ -1,13 +1,14 @@
 // _prod-grid.scss
 
 ul.og-grid.prod-grid { // THIS IS TEMP FOR STYLING PURPOSES ONLY
-	margin: 2rem 0 0;
+	margin: 2rem auto 0;
 	background: #f9f9f9;
+	max-width: 985px;
 	li {
 		display: inline-block;
 		margin: 10px 5px 0 5px;
 		vertical-align: top;
-		height: 480px;
+		height: auto;
 	}
 	li > a,
 	li > a img {

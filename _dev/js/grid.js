@@ -351,13 +351,13 @@ var Grid = (function() {
             this.$title = $( '<h3></h3>' );
             this.$description = $( '<p></p>' );
 
-            this.$imgOne = $( '<img src="../img/fash1.jpg" alt="" title="" />');
+            this.$imgOne = $( '<img class="prods" />');
             this.$linkOne = $( '<a href="#"></a>' ).append( this.$imgOne );
-            this.$imgTwo = $( '<img src="../img/fash2.jpg" alt="" title="" />');
+            this.$imgTwo = $( '<img class="prods" />');
             this.$linkTwo = $( '<a href="#"></a>' ).append( this.$imgTwo );
-			this.$imgThree = $( '<img src="../img/fash3.jpg" alt="" title="" />');
+			this.$imgThree = $( '<img class="prods" />');
             this.$linkThree = $( '<a href="#"></a>' ).append( this.$imgThree );
-            this.$imgFour = $( '<img src="../img/fash4.jpg" alt="" title="" />');
+            this.$imgFour = $( '<img class="prods" />');
             this.$linkFour = $( '<a href="#"></a>' ).append( this.$imgFour );
             
             this.$products = $( '<div class="products"></div>').append( this.$linkOne, this.$linkTwo, this.$linkThree, this.$linkFour );
@@ -376,7 +376,6 @@ var Grid = (function() {
             }
         },
         
-
 		update : function( $item ) {
 
 			if( $item ) {
@@ -395,30 +394,27 @@ var Grid = (function() {
 			// update current value
 			current = this.$item.index();
 
-
-
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
 					//href : $itemEl.attr( 'href' ),
+					prod1 : $itemEl.data( 'prod1' ),
+					prod2 : $itemEl.data( 'prod2' ),
+					prod3 : $itemEl.data( 'prod3' ),
+					prod4 : $itemEl.data( 'prod4' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
 					video: $itemEl.data('video')
 				};
-
+			//this.$href.attr( 'href', eldata.href );
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-			//this.$href.attr( 'href', eldata.href );
-
-			// VIDEO
-			// !!!!!
-			if (eldata.video) {
-                this.$iframeWrapper.attr('src', (eldata.video ? eldata.video : '')).css('display', 'block');
-            } else {
-                this.$iframeWrapper.css('display', 'none');
-            }
-
+			this.$imgOne.attr('src', ( eldata.prod1 ? eldata.prod1 : '' ));
+			this.$imgTwo.attr('src', ( eldata.prod2 ? eldata.prod2 : '' ));
+			this.$imgThree.attr('src', ( eldata.prod3 ? eldata.prod3 : '' ));
+			this.$imgFour.attr('src', ( eldata.prod4 ? eldata.prod4 : '' ));
+			
 			var self = this;
 			
 			// remove the current image in the preview
@@ -426,12 +422,20 @@ var Grid = (function() {
 				self.$largeImg.remove();
 			}
 
-			// preload large image and add it to the preview
-			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
 			if( self.$featureBox.is( ':visible' ) ) {
 				this.$loading.show();
+				// VIDEO- set URL if featureBox is visible and there is data-video in html
+				if (eldata.video) {
+		            this.$iframeWrapper.attr('src', ( eldata.video ? eldata.video : '' )).css('display', 'block');
+		        } else {
+		            this.$iframeWrapper.css('display', 'none');
+		        }
+				// preload large image and add it to the preview
+				// for smaller screens we don´t display the large image 
+				// (the media query will hide the fullimage wrapper)
 				$( '<img/>' ).load( function() {
-					var $img = $( this );
+					var $img = $( this ); //featured img
+					
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						self.$loading.hide();
 						self.$featureBox.find( 'img' ).remove();

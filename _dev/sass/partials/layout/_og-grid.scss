@@ -11,7 +11,7 @@
 	background-color: whitesmoke;
 	li {
 		display: inline-block;
-		margin: 10px 5px 0 5px;
+		margin: 10px 5px 0;
 		vertical-align: top;
 		height: 205px;
 	}
@@ -22,5 +22,6 @@
 		display: block;
 		position: relative;
 	}
+
 } // .og-grid 
 

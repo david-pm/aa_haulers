@@ -22,7 +22,7 @@
     width: 50%;
     float: left;
     text-align: center;
-    height: 75%;
+    height: 62%;
     overflow: hidden;
     position: relative;
 }
@@ -30,6 +30,12 @@
     display: inline-block;
     max-height: 100%;
     max-width: 100%;
+}
+.feature iframe {
+    margin: auto;
+    width: 500px;
+    min-height: 315px;
+    display: none;
 }
 
 @media screen and (max-width: 650px) {

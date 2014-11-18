@@ -16,22 +16,14 @@
 
 //////////////////////////////
 // One Offs
-//
-// video
-.feature iframe {
-	margin: auto;
-	width: 500px;
-	min-height: 315px;
-	display: none;
-}
-//
+// --------------------------------------------- ------------------------------------------------------
 // products in feature video
 .products {
 	height: auto;
-	width: 90%;
+	max-width: 1080px;
 	margin: 0 auto;
 	text-align: center;
-	padding: 20px 10px 10px; 
+	padding: 20px 0 0; 
 	border-top: 1px solid #beccca;
 	position: relative;
 	clear: both;
@@ -46,4 +38,24 @@
 			height: auto;
 		}
 	}
+}
+// 
+// p.hauler overlay
+#og-grid li {
+	&:hover .hauler {
+		opacity: .8;
+	}
+}
+.hauler {
+	padding: 2px 0 2px 5px;
+	background-color: whitesmoke;
+	font-size: 1.4rem;
+	color: #333;
+	width: 100%;
+	text-align: left;
+	transition: opacity .5s ease;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
 }
