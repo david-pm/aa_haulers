@@ -1,22 +1,9 @@
 //_header.scss
 
 header {
-	text-align: center;
-	h1, h2 {
-		letter-spacing: -1px;
-	}
-	h2 {
+	margin: 1rem 0;
+	h3 {
+		letter-spacing: -0.5px;
 		font-size: 2rem;
-	}
-	.AA-logo {
-		font-size: 5rem;
-		color: $red;
-		margin: 0;
-		&::after {
-			content:" \00a9";
-			font-size: 1rem;
-			font-weight: 300;
-			vertical-align: text-top;
-		}
 	}
 }

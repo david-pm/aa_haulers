@@ -1,9 +1,10 @@
 // _prod-grid.scss
 
-ul.og-grid.prod-grid { // THIS IS TEMP FOR STYLING PURPOSES ONLY
+.og-grid.prod-grid { 
+	border-top: 1px solid #beccca;
 	margin: 2rem auto 0;
 	background: #f9f9f9;
-	max-width: 985px;
+	padding: 2rem 13rem 0;
 	li {
 		display: inline-block;
 		margin: 10px 5px 0 5px;
