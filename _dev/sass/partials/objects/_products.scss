@@ -1,0 +1,24 @@
+// _products.scss
+
+// products in feature video
+.products {
+	height: auto;
+	max-width: 1080px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0 0; 
+	border-top: 1px solid #beccca;
+	position: relative;
+	clear: both;
+	a {
+		display: inline-block;
+		overflow: hidden;
+		margin: 0 8% 0 4%;
+		width: 139px;
+		height: 186px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

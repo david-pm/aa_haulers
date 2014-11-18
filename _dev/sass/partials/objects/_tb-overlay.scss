@@ -1,0 +1,20 @@
+// _tb-overlay.scss
+// p.hauler overlay
+#og-grid li {
+	&:hover .hauler {
+		opacity: .8;
+	}
+}
+.hauler {
+	padding: 2px 0 2px 5px;
+	background-color: whitesmoke;
+	font-size: 1.4rem;
+	color: #333;
+	width: 100%;
+	text-align: left;
+	transition: opacity .5s ease;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+}
