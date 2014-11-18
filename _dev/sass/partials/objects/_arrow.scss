@@ -1,6 +1,6 @@
 // _arrow.scss
 
-li.expanded > a::after {
+/* li.expanded > a::after {
 	top: auto;
 	border: solid transparent;
 	content: " ";
@@ -8,8 +8,36 @@ li.expanded > a::after {
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #ddd;
+	border-bottom-color: #f9f9f9;
 	border-width: 15px;
 	left: 50%;
 	margin: -20px 0 0 -15px;
+} */
+
+li.expanded > a::after, 
+li.expanded > a::before { 
+	content: '';
+    position: absolute;
+    z-index: 99;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+li.expanded > a::after {
+	border-color: transparent;
+    border-bottom-color: #f9f9f9;
+    border-width: 20px;
+    left: 50%;
+    bottom: -12px;
+    margin-left: -20px;
+}
+li.expanded > a::before {
+	border-color: transparent;
+    border-bottom-color: #beccca;
+    border-width: 21px;
+    left: 50%;
+    bottom: -11px;
+    margin-left: -21px;
 }

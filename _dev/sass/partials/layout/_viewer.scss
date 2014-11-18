@@ -3,7 +3,7 @@
 
 .viewer {
 	position: absolute;
-	background: #ddd;
+	background: #f9f9f9;
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -11,9 +11,13 @@
 	text-align: left;
 	height: 0;
 	overflow: hidden;
+	border-top: 1px solid #beccca;
 }
 
-.viewer-inner {
-	padding: 50px 30px;
-	height: 100%;
-}
+	.viewer-inner {
+		padding: 50px 30px;
+		height: 100%;
+		margin: auto;
+		max-width: 1700px;
+		position: relative;
+	}
