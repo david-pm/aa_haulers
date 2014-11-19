@@ -1,13 +1,16 @@
 // _prod-grid.scss
 
-.og-grid.prod-grid { 
+.prod-grid { 
+	clear: both;
 	border-top: 1px solid #beccca;
-	margin: 2rem auto 0;
+	margin: 2rem auto;
 	background: #f9f9f9;
-	padding: 2rem 13rem 0;
+	padding: 2rem 0 0;
+	text-align: center;
+	list-style: none;
 	li {
 		display: inline-block;
-		margin: 10px 5px 0 5px;
+		margin: 10px 2.5px 0;
 		vertical-align: top;
 		height: auto;
 	}

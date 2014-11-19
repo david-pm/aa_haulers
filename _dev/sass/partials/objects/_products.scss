@@ -2,17 +2,15 @@
 
 // products in feature video
 .products {
-	height: auto;
 	max-width: 1080px;
-	margin: 0 auto;
+	width: 100%;
+	margin: auto;
 	text-align: center;
-	padding: 20px 0 0; 
+	padding: 20px 0 0;
 	border-top: 1px solid #beccca;
-	position: relative;
 	clear: both;
 	a {
 		display: inline-block;
-		overflow: hidden;
 		margin: 0 1rem;
 		width: 139px;
 		height: 186px;

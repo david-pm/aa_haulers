@@ -2,24 +2,30 @@
    Layout/Constrained
    ======================= */
 .og-grid {
+	overflow: hidden;
     list-style: none;
-	padding: 20px 0;
+	padding: 20px 0px;
 	margin: 1rem auto;
 	text-align: center;
 	width: 100%;
 	li {
 		display: inline-block;
+		overflow: hidden;
+		width: 125px;
+		height: auto;
 		margin: 10px 5px 0;
 		vertical-align: top;
-		height: 205px;
+		transition: all .5s;
 	}
 	li > a,
 	li > a img {
 		border: none;
 		outline: none;
 		display: block;
-		position: relative;
+		width: 100%;
 	}
-
+	li > a { position: relative; }
+	li > a img { max-width: 100%; }
 } // .og-grid 
 
+ 
