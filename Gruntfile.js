@@ -12,12 +12,18 @@ module.exports = function(grunt) {
         dest: '_dev/js/minified/uglified.js'
       }
     }, //uglify
-    concat: {
+    /*concat: {
       dist: {
         src: ['_dev/js/libs/*.js', '_dev/js/minified/uglified.js'],
         dest: 'js/script.min.js',
       }
-    }, //concat
+    },*/ //concat
+    concat: {
+      dist: {
+        src: ['_dev/js/minified/uglified.js'],
+        dest: 'js/nojquery.min.js',
+      }
+    },
     sass: {
       dist: {                            
         options: {                       
