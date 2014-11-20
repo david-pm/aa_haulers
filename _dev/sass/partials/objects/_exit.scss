@@ -10,6 +10,7 @@
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
+	@media (max-width: 515px) { top: 12px; right: 12px; }
 }
 
 .exit::before,

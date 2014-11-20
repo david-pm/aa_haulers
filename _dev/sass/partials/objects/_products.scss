@@ -11,8 +11,12 @@
 	border-top: 1px solid #beccca;
 	overflow: hidden;
 	clear: both;
-	@media screen and (max-width: 880px) { 
+	@media (max-width: 880px) { 
 		height: 450px;
+		padding: 15px 0 0;
+	}
+	@media (max-width: 440px) { 
+		height: 390px;
 	}
 	a {
 		display: inline-block;
@@ -23,10 +27,16 @@
 	    width: 15.6666667%; /* Fallback */
 	    width: -webkit-calc(94% / 6);
 	    width: calc(94% / 6);
-	    @media screen and (max-width: 880px) { 
+	    @media (max-width: 880px) { 
 	    	width: 31.3333333%; /* Fallback */
 	    	width: -webkit-calc(94% / 3);
 	    	width: calc(94% / 3);
+	    }
+	    @media (max-width: 440px) { 
+	    	/*width: 47%; 
+	    	width: -webkit-calc(94% / 2);
+	    	width: calc(94% / 2); */
+	    	margin: 0.2rem;
 	    }
 		img {
 			max-width: 100%;

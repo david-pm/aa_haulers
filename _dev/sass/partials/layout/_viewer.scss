@@ -21,6 +21,12 @@
 		max-width: 1700px;
 		position: relative;
 		@media (max-width: 880px) {
-			padding: 50px 100px;
+			padding: 50px;
+		}
+		@media (max-width: 515px) {
+			padding: 50px 10px 60px;
+		}
+		@media (max-width: 440px) { 
+			padding: 50px 5px 60px;
 		}
 	}
