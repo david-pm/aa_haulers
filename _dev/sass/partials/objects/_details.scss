@@ -4,12 +4,20 @@
 	width: 45%;
 	float: left;
 	height: 55%;
+	padding: 0 2% 0 4%;
 	overflow: hidden;
 	position: relative;
-}
-
-.og-details {
-	padding: 0 40px 0 20px;
+	transition: all .4s;
+	@media screen and (max-width: 880px) {
+		width: 36%;
+		padding: 0 0 0 4%;
+	}
+	@media screen and (max-width: 715px) {
+		float: none; 
+		width: 100%;
+		padding: 0 3%; 
+		height: 25%; 
+	}
 }
 
 .og-details h3 {
@@ -17,6 +25,12 @@
 	font-size: 32px;
 	padding: 0 0 10px;
 	margin-bottom: 10px;
+	transition: all .4s;
+	@media screen and (max-width: 715px) {
+		text-align: center;
+		font-size: 26px;
+		margin-bottom: 0px;
+	}
 }
 
 .og-details p {
@@ -50,16 +64,3 @@
 	color: #999;
 }
 
-
-@media screen and (max-width: 830px) {
-
-	.og-details h3 { font-size: 32px; }
-	.og-details p { font-size: 13px; }
-	.og-details a { font-size: 12px; }
-
-}
-@media screen and (max-width: 650px) {
-
-	.og-details { float: none; width: 100%; }
-	
-}

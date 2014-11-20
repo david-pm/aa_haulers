@@ -407,7 +407,15 @@ var Grid = (function() {
 					prod3 : $itemEl.data( 'prod3' ),
 					prod4 : $itemEl.data( 'prod4' ),
 					prod5 : $itemEl.data( 'prod5' ),
-					prod6 : $itemEl.data( 'prod6' ), 
+					prod6 : $itemEl.data( 'prod6' ),
+
+					prod1link : $itemEl.data ( 'prod1-link'),
+					prod2link : $itemEl.data ( 'prod2-link'),
+					prod3link : $itemEl.data ( 'prod3-link'),
+					prod4link : $itemEl.data ( 'prod4-link'),
+					prod5link : $itemEl.data ( 'prod5-link'),
+					prod6link : $itemEl.data ( 'prod6-link'),
+
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
@@ -422,6 +430,14 @@ var Grid = (function() {
 			this.$imgFour.attr('src', ( eldata.prod4 ? eldata.prod4 : '' ));
 			this.$imgFive.attr('src', ( eldata.prod5 ? eldata.prod5 : '' ));
 			this.$imgSix.attr('src', ( eldata.prod6 ? eldata.prod6 : '' ));
+
+			this.$linkOne.attr('href', ( eldata.prod1link ? eldata.prod1link : '' ));
+			this.$linkTwo.attr('href', ( eldata.prod2link ? eldata.prod2link : '' ));
+			this.$linkThree.attr('href', ( eldata.prod3link ? eldata.prod3link : '' ));
+			this.$linkFour.attr('href', ( eldata.prod4link ? eldata.prod4link : '' ));
+			this.$linkFive.attr('href', ( eldata.prod5link ? eldata.prod5link : '' ));
+			this.$linkSix.attr('href', ( eldata.prod6link ? eldata.prod6link : '' ));
+
 			
 			var self = this;
 			
