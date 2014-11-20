@@ -4,12 +4,35 @@
 
 //////////////////////////////
 // Base Imports
-@import "partials/base";
+//@import "partials/base";
 
 .h-container {
+	font: 300 62.5%/1.5 $font2;
 	border-top: 3px solid #ddd;
 	max-width: 955px;
 	margin: auto;
+	background: #f9f9f9;
+	height: 100%;
+	a {
+	    color: $color-link;
+	    text-decoration: none;
+	    @include transition();
+	    &:hover {
+	        color: $color-link-hover;
+	    }
+	}
+	h1 {
+	    font-size: 3.2rem;
+	}
+	h3 {
+	    font-size: 2rem;
+	}
+	::-moz-selection, ::selection {
+	    background: $color-selection;
+	    color: #fff;
+	    text-shadow: none;
+	}
+
 
 //////////////////////////////
 // Layout Imports
@@ -19,7 +42,7 @@
 // Objects Imports
 @import "partials/objects";
 
-}
+} // .h-container
 
 
 
