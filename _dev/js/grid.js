@@ -364,7 +364,7 @@ var Grid = (function() {
             this.$imgSix = $( '<img class="prods" />');
             this.$linkSix = $( '<a href="#"></a>' ).append( this.$imgSix );
             
-            this.$products = $( '<div class="products"></div>').append( this.$linkOne, this.$linkTwo, this.$linkThree, this.$linkFour, this.$linkFive, this.$linkSix );
+            this.$products = $( '<div class="hlr-products"></div>').append( this.$linkOne, this.$linkTwo, this.$linkThree, this.$linkFour, this.$linkFive, this.$linkSix );
             
             this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description );
             this.$loading = $( '<div class="loading"></div>' );

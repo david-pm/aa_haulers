@@ -6,6 +6,11 @@
 // Base Imports
 @import "partials/base";
 
+.h-container {
+	border-top: 3px solid #ddd;
+	max-width: 955px;
+	margin: auto;
+
 //////////////////////////////
 // Layout Imports
 @import "partials/layout";
@@ -13,6 +18,10 @@
 //////////////////////////////
 // Objects Imports
 @import "partials/objects";
+
+}
+
+
 
 //////////////////////////////
 // One Offs
