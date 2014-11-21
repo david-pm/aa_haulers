@@ -3,9 +3,7 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   
   grunt.initConfig({
-    jshint: {
-      all: ['Gruntfile.js', '_dev/js/*.js']
-    }, //jshint
+    
     uglify: {
       build: {
         src: '_dev/js/*.js',
@@ -27,10 +25,10 @@ module.exports = function(grunt) {
     sass: {
       dist: {                            
         options: {                       
-          style: 'compressed'
+          style: 'nested'
         },
         files: {                        
-          'css/style.css': ['_dev/sass/*.scss', '_dev/sass/**/*.scss', '_dev/sass/**/**/*.scss' ] // 'dest': 'src'
+          'css/expanded/style.css': ['_dev/sass/*.scss', '_dev/sass/**/*.scss', '_dev/sass/**/**/*.scss' ] // 'dest': 'src'
         }
       }
     }, //sass
@@ -41,7 +39,7 @@ module.exports = function(grunt) {
       multiple_files: {
         expand: true,
         flatten: true,
-        src: 'css/style.css',
+        src: 'css/expanded/style.css',
         dest: 'css/prefixed/'
       }
     }, //autoprefixer
@@ -65,7 +63,7 @@ module.exports = function(grunt) {
     connect: {
        server: {
         options: {
-          port: 8001, // http://localhost:8001/
+          port: 8002, // http://localhost:8002/
           base: './'
         }
       }
@@ -76,7 +74,7 @@ module.exports = function(grunt) {
       }, 
       scripts : {
         files : ['Gruntfile.js', '_dev/js/*.js'],
-        tasks : ['uglify', 'jshint', 'concat']       
+        tasks : ['uglify', 'concat']       
       }, // scripts
       images: {
         files: ['images/**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],

@@ -14,6 +14,8 @@
 *,
 *:after,
 *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
@@ -73,6 +75,10 @@
   .h-container a {
     color: #555;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .h-container a:hover {
       color: #3b3b3b; }
@@ -80,10 +86,6 @@
     font-size: 3.2rem; }
   .h-container h3 {
     font-size: 2rem; }
-  .h-container ::-moz-selection, .h-container ::-moz-selection {
-    background: rgba(100, 167, 255, 0.9);
-    color: #fff;
-    text-shadow: none; }
   .h-container ::-moz-selection, .h-container ::selection {
     background: rgba(100, 167, 255, 0.9);
     color: #fff;
@@ -203,9 +205,11 @@
     height: 1px;
     background: #888;
     -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
     transform: rotate(45deg); }
   .h-container .exit::after {
     -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
     transform: rotate(-45deg); }
   .h-container .exit:hover::before,
   .h-container .exit:hover::after {
@@ -322,8 +326,18 @@
     left: 50%;
     margin: -25px 0 0 -25px;
     -webkit-animation: loader 0.5s infinite ease-in-out both;
+    -moz-animation: loader 0.5s infinite ease-in-out both;
     animation: loader 0.5s infinite ease-in-out both; }
 @-webkit-keyframes loader {
+  0% {
+    background: #ddd; }
+  33% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% {
+    background: #ccc;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; } }
+@-moz-keyframes loader {
   0% {
     background: #ddd; }
   33% {
@@ -366,11 +380,13 @@
       overflow: hidden;
       width: 15.6666667%;
       /* Fallback */
+      width: -webkit-calc(94% / 6);
       width: calc(94% / 6); }
       @media (max-width: 880px) {
         .h-container .hlr-products a {
           width: 31.3333333%;
           /* Fallback */
+          width: -webkit-calc(94% / 3);
           width: calc(94% / 3); } }
       @media (max-width: 440px) {
         .h-container .hlr-products a {
@@ -380,3 +396,5 @@
           margin: 0.2rem; } }
       .h-container .hlr-products a img {
         max-width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
