@@ -11,9 +11,9 @@
 /*
  * Border Box
  */
-*,
-*:after,
-*:before {
+.h-container *,
+.h-container *:after,
+.h-container *:before {
   box-sizing: border-box;
   padding: 0;
   margin: 0; }

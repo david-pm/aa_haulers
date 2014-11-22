@@ -4,15 +4,14 @@
 /*
  * Border Box
  */
-*,
-*:after,
-*:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+.h-container *,
+.h-container *:after,
+.h-container *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 /*
  * Clearfix: contain floats

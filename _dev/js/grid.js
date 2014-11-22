@@ -161,9 +161,9 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
 		// list of items
-	var $grid = $( '#og-grid' ),
+	var $grid = null,
 		// the items
-		$items = $grid.children( 'li' ),
+		$items = null,
 		// current expanded item's index
 		current = -1,
 		// position (top) of the expanded item
@@ -190,7 +190,8 @@ var Grid = (function() {
 		settings = {
 			minHeight : 500,
 			speed : 350,
-			easing : 'ease'
+			easing : 'ease',
+			gridEl : '#og-grid'
 		};
 
 	function init( config ) {
@@ -198,6 +199,9 @@ var Grid = (function() {
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
 		
+		$grid = $(settings.gridEl);
+		$items = $grid.children( 'li' );
+
 		// preload all images
 		$grid.imagesLoaded( function() {
 
