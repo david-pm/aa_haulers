@@ -10,12 +10,6 @@ module.exports = function(grunt) {
         dest: '_dev/js/minified/uglified.js'
       }
     }, //uglify
-    /*concat: {
-      dist: {
-        src: ['_dev/js/libs/*.js', '_dev/js/minified/uglified.js'],
-        dest: 'js/script.min.js',
-      }
-    },*/ //concat
     concat: {
       dist: {
         src: ['_dev/js/minified/uglified.js'],
@@ -102,8 +96,4 @@ module.exports = function(grunt) {
   
   grunt.registerTask('default', ['connect', 'watch']);
 
-  // A very basic custom 'logger' task.
-  grunt.registerTask('logger', 'Log some stuff.', function() {
-    grunt.log.write('Logging some stuff...').ok();
-  });
 }; // exports

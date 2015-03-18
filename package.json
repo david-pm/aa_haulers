@@ -2,7 +2,7 @@
   "name": "Haulers-AmericanApparel",
   "description": "A video gallery for AmericanApparel's Haulers",
   "author": "davidpm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~1.0.1",
