@@ -4,6 +4,7 @@
 html {
     font: 300 62.5%/1.5 $font2;
     height: 100%;
+    margin-left: calc(100vw - 100%);
 }
 body { 
     padding: 1rem 0 0;
