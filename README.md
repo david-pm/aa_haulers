@@ -8,3 +8,5 @@ A slide down viewer I made for [American Apparel's Hauler campaign](http://store
 
 
 Inspired by [Codrops](http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/)
+
+Images [Mine](https://instagram.com/the_sluttiest/) [American Apparel](http://store.americanapparel.net/)
